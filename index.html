@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics for Data Science - Q&A Learning Hub</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Ubuntu", "Droid Sans", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #667eea;
+            cursor: pointer;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .card p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .badge-brief {
+            background: #28a745;
+            color: white;
+        }
+        
+        .badge-detailed {
+            background: #007bff;
+            color: white;
+        }
+        
+        .links {
+            margin-top: 15px;
+        }
+        
+        .links a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 16px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-size: 0.9em;
+        }
+        
+        .links a:hover {
+            background: #764ba2;
+        }
+        
+        .stats {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .stat-item {
+            padding: 15px;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Statistics for Data Science</h1>
+            <p>Comprehensive Q&A Learning Hub with Visual Diagrams</p>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2>📖 Brief Q&A (2.5-Hour Session)</h2>
+                <p style="margin-bottom: 20px; color: #666;">
+                    Essential concepts optimized for quick learning. Perfect for focused study sessions.
+                </p>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Core Statistics Concepts</h3>
+                        <p>20 essential questions covering Random Variables, Distributions, CLT, Confidence Intervals, and Hypothesis Testing.</p>
+                        <div class="links">
+                            <a href="BRIEF_STATS_QnA/curious_learner_questions_brief.html" target="_blank">
+                                <span class="badge badge-brief">Brief</span> View
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Medicon Dose Testing Case Study</h3>
+                        <p>8 practical questions demonstrating Binomial and Normal distributions in pharmaceutical quality assurance.</p>
+                        <div class="links">
+                            <a href="BRIEF_STATS_QnA/medicon_curious_learner_questions_brief.html" target="_blank">
+                                <span class="badge badge-brief">Brief</span> View
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Mobile Internet Usage Analysis</h3>
+                        <p>10 questions on Hypothesis Testing workflow, z-test vs t-test, and interpreting statistical results.</p>
+                        <div class="links">
+                            <a href="BRIEF_STATS_QnA/mobile_internet_curious_learner_questions_brief.html" target="_blank">
+                                <span class="badge badge-brief">Brief</span> View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>📚 Detailed Q&A (Comprehensive Study)</h2>
+                <p style="margin-bottom: 20px; color: #666;">
+                    In-depth coverage with extensive explanations. Ideal for thorough understanding and exam preparation.
+                </p>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Complete Statistics Guide</h3>
+                        <p>325 comprehensive questions covering all aspects of statistics for data science with detailed explanations.</p>
+                        <div class="links">
+                            <a href="DETAILED_STATS_QnA/curious_learner_questions.html" target="_blank">
+                                <span class="badge badge-detailed">Detailed</span> View
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Medicon Case Study - Full Analysis</h3>
+                        <p>50 detailed questions exploring Binomial distributions, Normal distributions, and confidence intervals in depth.</p>
+                        <div class="links">
+                            <a href="DETAILED_STATS_QnA/medicon_curious_learner_questions.html" target="_blank">
+                                <span class="badge badge-detailed">Detailed</span> View
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Mobile Internet Analysis - Complete</h3>
+                        <p>50 comprehensive questions on hypothesis testing, covering all nuances and edge cases.</p>
+                        <div class="links">
+                            <a href="DETAILED_STATS_QnA/mobile_internet_curious_learner_questions.html" target="_blank">
+                                <span class="badge badge-detailed">Detailed</span> View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats">
+                <h2 style="color: #667eea; margin-bottom: 20px;">📊 Learning Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">38</div>
+                        <div class="stat-label">Brief Questions</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">425</div>
+                        <div class="stat-label">Detailed Questions</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">Study Modules</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">With Diagrams</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 Statistics for Data Science - Q&A Learning Hub</p>
+            <p style="margin-top: 10px; opacity: 0.8;">All content includes references to official learning materials</p>
+        </footer>
+    </div>
+</body>
+</html>

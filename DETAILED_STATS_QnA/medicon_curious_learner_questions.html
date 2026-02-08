@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>medicon_curious_learner_questions.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="curious-learner-questions---medicon-dose-testing-case-study">Curious Learner Questions - Medicon Dose Testing Case Study</h1>
+<p><em>Enhanced with Visual Diagrams</em></p>
+<h2 id="case-study-context">CASE STUDY CONTEXT</h2>
+<h3 id="understanding-the-problem">Understanding the Problem</h3>
+<ol>
+<li><strong>Why does Medicon need to test the sixth batch if the vaccine already passed clinical trials?</strong>
+<ul>
+<li>Clinical trials test safety and efficacy; batch testing ensures manufacturing quality and consistency across production runs.</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Clinical Trials] --> B["Safety & Efficacy<br/>Approved"]
+    B --> C["Manufacturing<br/>Begins"]
+    C --> D["Multiple Batches<br/>Produced"]
+    D --> E["Batch Quality<br/>Testing"]
+    E --> F["Ensure Consistency<br/>Across Batches"]
+    F --> G["QA Team<br/>Assessment"]
+</div></code></pre>
+<ol start="2">
+<li><strong>What's the difference between &quot;satisfactory job&quot; and &quot;clinical effectiveness&quot;?</strong>
+<ul>
+<li>Clinical effectiveness is proven in trials; &quot;satisfactory job&quot; here means no symptoms/side effects after 14 days - a practical quality metric.</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Dose Effectiveness] --> B[Clinical Trials]
+    A --> C[Batch Quality Testing]
+    B --> D["Long-term Studies<br/>Efficacy Data"]
+    C --> E["14-Day Check<br/>No Symptoms/Side Effects"]
+    D --> F["Regulatory<br/>Approval"]
+    E --> G["Batch Release<br/>Decision"]
+</div></code></pre>
+<ol start="3">
+<li><strong>Why test 100 volunteers when 200,000 doses were already administered?</strong>
+<ul>
+<li>Testing every dose is impossible; sampling 100 provides statistical confidence about batch quality without testing all 40,000 units.</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart LR
+    A["Batch Size<br/>40,000 Doses"] --> B{Test All?}
+    B -->|Impossible| C["Too Expensive<br/>Too Time-Consuming"]
+    B -->|Practical| D[Sample 100 Doses]
+    D --> E[Statistical Inference]
+    E --> F["Make Decision About<br/>Entire Batch"]
+</div></code></pre>
+<h2 id="binomial-distribution-for-dose-quality">BINOMIAL DISTRIBUTION FOR DOSE QUALITY</h2>
+<h3 id="fundamentals---why-binomial">Fundamentals - Why Binomial?</h3>
+<ol start="4">
+<li><strong>Why is dose quality (satisfactory/unsatisfactory) modeled as Binomial?</strong>
+<ul>
+<li>Each dose has two outcomes (satisfactory/unsatisfactory), fixed number of trials (n doses), independence between doses, and constant probability p.</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Dose Quality Testing] --> B{Check Assumptions}
+    B --> C["Two Outcomes?<br/>Yes: Satisfactory/Not"]
+    B --> D["Fixed n Trials?<br/>Yes: n = 100 doses"]
+    B --> E["Independent?<br/>Yes: Each dose separate"]
+    B --> F["Constant p?<br/>Yes: p = 0.09"]
+    C & D & E & F --> G["Binomial Distribution<br/>Applies!"]
+</div></code></pre>
+<ol start="5">
+<li><strong>How did they calculate p = 0.09 (probability of unsatisfactory dose)?</strong>
+<ul>
+<li>If satisfactory is 10 times more likely than unsatisfactory: p + 10p = 1, so 11p = 1, giving p = 1/11 ≈ 0.09.</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Given Information] --> B[Satisfactory: 10x More Likely]
+    B --> C["Let p = P(Unsatisfactory)"]
+    C --> D["P(Satisfactory) = 10p"]
+    D --> E["p + 10p = 1"]
+    E --> F["11p = 1"]
+    F --> G["p = 1/11 = 0.09"]
+    G --> H["9% Unsatisfactory<br/>91% Satisfactory"]
+</div></code></pre>
+<ol start="6">
+<li><strong>What if the probability changes between batches? Does Binomial still work?</strong>
+<ul>
+<li>No! Binomial requires constant p. If probability varies, you'd need different models or test each batch separately.</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Probability p] --> B["Constant Across<br/>All Doses?"]
+    B -->|Yes| C["Binomial Works<br/>X ~ Binomial(n, p)"]
+    B -->|No| D[Binomial Breaks]
+    D --> E[Need Alternative]
+    E --> F["Test Each Batch<br/>Separately"]
+    E --> G["Use Variable<br/>Probability Model"]
+</div></code></pre>
+<h3 id="practical-applications">Practical Applications</h3>
+<ol start="7">
+<li><strong>Why calculate &quot;exactly 3 unsatisfactory doses&quot; - isn't that too specific?</strong>
+<ul>
+<li>Exact probabilities help understand the distribution shape and identify most likely outcomes; they're building blocks for &quot;at most&quot; and &quot;at least&quot; calculations.</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A["Exact Probability<br/>P(X = 3)"] --> B[Building Block]
+    B --> C["Calculate P(X ≤ 3)"]
+    B --> D["Calculate P(X ≥ 3)"]
+    B --> E["Understand Distribution<br/>Shape"]
+    E --> F["Identify Most Likely<br/>Outcomes"]
+</div></code></pre>
+<ol start="8">
+<li><strong>What does &quot;at most 3 unsatisfactory doses&quot; mean in business terms?</strong>
+<ul>
+<li>It means 0, 1, 2, or 3 failures - the probability that quality is acceptable (few failures). Helps QA decide if batch meets quality standards.</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A["At Most 3<br/>Unsatisfactory"] --> B[Means: 0, 1, 2, or 3]
+    B --> C[Quality Acceptable]
+    C --> D[Few Failures]
+    D --> E["Batch Meets<br/>Quality Standard"]
+    E --> F["QA Decision:<br/>Approve Batch?"]
+</div></code></pre>
+<ol start="9">
+<li><strong>Why is &quot;at least 30 failures&quot; important for the New York City order?</strong>
+<ul>
+<li>It quantifies worst-case risk: probability of having 30+ failures out of 200 doses. Helps assess if order size is safe and if additional quality measures are needed.</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[NYC Order: 200 Doses] --> B["Calculate P(X ≥ 30)"]
+    B --> C["Worst-Case<br/>Scenario"]
+    C --> D[30+ Failures]
+    D --> E{Risk Acceptable?}
+    E -->|Low Probability| F[Proceed with Order]
+    E -->|High Probability| G["Additional Quality<br/>Measures Needed"]
+</div></code></pre>
+<ol start="10">
+<li><strong>How does sample size (100 vs 200) affect the probability calculations?</strong>
+<ul>
+<li>Larger samples (n=200) have more variability in outcomes but tighter distribution around np. The shape changes: wider spread but more predictable average.</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Sample Size n] --> B["n = 100"]
+    A --> C["n = 200"]
+    B --> D["Mean = 9<br/>Std Dev ≈ 2.86"]
+    C --> E["Mean = 18<br/>Std Dev ≈ 4.05"]
+    D --> F[Narrower Distribution]
+    E --> G["Wider Distribution<br/>But More Stable Mean"]
+</div></code></pre>
+<h2 id="normal-distribution-for-time-of-effect">NORMAL DISTRIBUTION FOR TIME OF EFFECT</h2>
+<h3 id="fundamentals">Fundamentals</h3>
+<ol start="11">
+<li><strong>Why assume time of effect follows Normal distribution with only 50 samples?</strong></li>
+</ol>
+<ul>
+<li>With n=50, we can't verify normality perfectly, but we assume it for practical calculations. The Central Limit Theorem suggests sample means are normal, and many biological processes approximate normal.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[50 Samples] --> B["Enough for<br/>Normality?"]
+    B -->|Not Perfect| C["Visual Check:<br/>KDE Plot"]
+    C --> D["Approximately<br/>Normal Shape"]
+    D --> E["Assume Normal<br/>for Calculations"]
+    E --> F["CLT Supports<br/>This Assumption"]
+</div></code></pre>
+<ol start="12">
+<li><strong>What if the time of effect data is skewed? Can we still use Normal?</strong></li>
+</ol>
+<ul>
+<li>Skewed data violates normality assumption. You'd need transformations (log-normal) or non-parametric methods. The analysis might be inaccurate.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Time of Effect Data] --> B{Distribution Shape?}
+    B -->|Normal| C["Use Normal<br/>Distribution"]
+    B -->|Skewed| D[Problem!]
+    D --> E[Options]
+    E --> F["Transform Data<br/>Log-Normal"]
+    E --> G["Use Non-Parametric<br/>Methods"]
+    E --> H["Larger Sample<br/>Size"]
+</div></code></pre>
+<ol start="13">
+<li><strong>Why estimate population mean from sample mean? Isn't sample mean just an estimate?</strong></li>
+</ol>
+<ul>
+<li>Yes, it's an estimate! But with proper statistical methods (confidence intervals), we quantify the uncertainty and make reliable inferences about the true population mean.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart LR
+    A["Population Mean μ<br/>Unknown"] --> B[Sample 50 Doses]
+    B --> C["Calculate x̄ = 13.44"]
+    C --> D[Point Estimate]
+    D --> E[But Uncertain!]
+    E --> F["Use Confidence<br/>Interval"]
+    F --> G["Range: 12.09 to 14.79<br/>95% Confidence"]
+</div></code></pre>
+<h3 id="practical-applications">Practical Applications</h3>
+<ol start="14">
+<li><strong>What does &quot;probability time &lt; 11.5 hours = 0.34&quot; mean for patients?</strong></li>
+</ol>
+<ul>
+<li>About 34% of doses take less than 11.5 hours to become effective. Patients can expect faster effectiveness about 1 in 3 times.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Time of Effect] --> B[Distribution]
+    B --> C[34% Below 11.5 hrs]
+    B --> D[66% Above 11.5 hrs]
+    C --> E["Fast Effectiveness<br/>1 in 3 Doses"]
+    D --> F["Slower Effectiveness<br/>2 in 3 Doses"]
+</div></code></pre>
+<ol start="15">
+<li><strong>Why calculate the 90th percentile (19.52 hours)? What's its business value?</strong></li>
+</ol>
+<ul>
+<li>90% of doses are effective within 19.52 hours. Helps set patient expectations, plan follow-up schedules, and identify outliers needing attention.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A["90th Percentile<br/>19.52 hours"] --> B["90% Effective<br/>Within This Time"]
+    B --> C[Business Uses]
+    C --> D["Set Patient<br/>Expectations"]
+    C --> E["Plan Follow-up<br/>Schedules"]
+    C --> F["Identify Outliers<br/>Needing Attention"]
+</div></code></pre>
+<ol start="16">
+<li><strong>How do manufacturers use percentiles for quality control?</strong></li>
+</ol>
+<ul>
+<li>Percentiles define acceptable ranges: if 95th percentile exceeds threshold, investigate. They help set specifications and monitor process capability.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">mindmap
+    root((Percentiles in<br/>Quality Control))
+        Specifications
+            Define Acceptable Range
+            Set Upper/Lower Limits
+        Monitoring
+            Track Process Capability
+            Detect Shifts
+        Decision Making
+            Accept/Reject Batches
+            Identify Improvements
+        Patient Communication
+            Set Expectations
+            Provide Timeframes
+</div></code></pre>
+<h2 id="confidence-intervals">CONFIDENCE INTERVALS</h2>
+<h3 id="fundamentals">Fundamentals</h3>
+<ol start="17">
+<li><strong>Why use t-distribution instead of z-distribution for confidence intervals?</strong></li>
+</ol>
+<ul>
+<li>Population standard deviation σ is unknown (we only have sample s). With small samples (n=50), t-distribution accounts for extra uncertainty from estimating σ.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Confidence Interval] --> B["Population σ<br/>Known?"]
+    B -->|Yes| C["Use z-distribution<br/>Z ~ N(0,1)"]
+    B -->|No| D["Use t-distribution<br/>t with df = n-1"]
+    D --> E["Accounts for<br/>Uncertainty in s"]
+    E --> F["Wider Intervals<br/>More Conservative"]
+</div></code></pre>
+<ol start="18">
+<li><strong>What does &quot;95% confidence&quot; actually mean for the time of effect?</strong></li>
+</ol>
+<ul>
+<li>If we repeated this sampling 100 times, about 95 of the calculated intervals would contain the true population mean. The single interval either does or doesn't - we don't know which.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[95% Confidence Interval] --> B[12.09 to 14.79 hours]
+    B --> C[Interpretation]
+    C --> D[If Repeat 100 Times]
+    D --> E["95 Intervals Contain<br/>True μ"]
+    D --> F["5 Intervals Don't<br/>Contain True μ"]
+    E --> G["Current Interval:<br/>Either Does or Doesn't"]
+</div></code></pre>
+<ol start="19">
+<li><strong>Why is the confidence interval (12.09, 14.79) wider than just saying &quot;mean = 13.44&quot;?</strong></li>
+</ol>
+<ul>
+<li>The interval acknowledges uncertainty. Point estimate (13.44) is precise but possibly wrong; interval shows we're 95% confident the true mean lies in this range.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR
+    A["Point Estimate<br/>13.44 hours"] --> B["Precise but<br/>Uncertain"]
+    C["Confidence Interval<br/>12.09 to 14.79"] --> D["Acknowledges<br/>Uncertainty"]
+    D --> E["Range: ±1.35 hours"]
+    E --> F["95% Confidence<br/>True Mean in Range"]
+</div></code></pre>
+<ol start="20">
+<li><strong>What happens to confidence interval width if we increase sample size?</strong></li>
+</ol>
+<ul>
+<li>Larger samples give narrower intervals (more precision). The margin of error decreases as √n increases, making estimates more reliable.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Sample Size] --> B["n = 50"]
+    A --> C["n = 100"]
+    A --> D["n = 200"]
+    B --> E[CI Width: 2.70 hours]
+    C --> F["CI Width: 1.91 hours<br/>Narrower"]
+    D --> G["CI Width: 1.35 hours<br/>Even Narrower"]
+    F --> H["More Precision<br/>Less Uncertainty"]
+    G --> H
+</div></code></pre>
+<h3 id="practical-applications">Practical Applications</h3>
+<ol start="21">
+<li><strong>How does QA team use confidence intervals to make batch decisions?</strong></li>
+</ol>
+<ul>
+<li>If confidence interval falls within acceptable range (e.g., 10-15 hours), approve batch. If interval includes unacceptable values, investigate or reject.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A["Calculate 95% CI<br/>12.09 to 14.79 hrs"] --> B{Within Acceptable<br/>Range?} --> B["Within Acceptable<br/>Range?"]
+    B -->|Yes: 10-15 hrs| C[Approve Batch]
+    B -->|No: Includes <10 or >15| D[Investigate]
+    D --> E{Can Fix?}
+    E -->|Yes| F[Corrective Action]
+    E -->|No| G[Reject Batch]
+</div></code></pre>
+<ol start="22">
+<li><strong>Why is 95% confidence standard? Why not 99% or 90%?</strong></li>
+</ol>
+<ul>
+<li>95% balances precision and confidence: 99% gives wider intervals (less useful), 90% gives narrower intervals (less confident). 95% is conventional compromise.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Confidence Level] --> B[90% Confidence]
+    A --> C[95% Confidence]
+    A --> D[99% Confidence]
+    B --> E["Narrow Interval<br/>Less Confident"]
+    C --> F["Balanced<br/>Conventional"]
+    D --> G["Wide Interval<br/>Very Confident"]
+    F --> H[Industry Standard]
+</div></code></pre>
+<ol start="23">
+<li><strong>Can confidence intervals help predict individual patient response times?</strong></li>
+</ol>
+<ul>
+<li>No! CI is for population mean, not individual predictions. For individuals, use the distribution (Normal with μ=13.44, σ=4.75) to find probabilities.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Statistical Inference] --> B["Population Mean μ<br/>CI: 12.09 to 14.79"]
+    A --> C[Individual Prediction]
+    B --> D["About Average<br/>Across All Patients"]
+    C --> E["Use Distribution<br/>N(13.44, 4.75²)"]
+    E --> F["P(Time < 11.5) = 0.34<br/>For One Patient"]
+</div></code></pre>
+<h2 id="assumptions-and-limitations">ASSUMPTIONS AND LIMITATIONS</h2>
+<h3 id="critical-thinking">Critical Thinking</h3>
+<ol start="24">
+<li><strong>What if doses aren't independent? Does Binomial break?</strong></li>
+</ol>
+<ul>
+<li>Yes! If one dose's failure affects others (contamination, batch issues), independence is violated. Need different models accounting for dependence.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Dose Independence] --> B["Are Doses<br/>Independent?"]
+    B -->|Yes| C["Binomial Works<br/>X ~ Binomial(n,p)"]
+    B -->|No| D[Independence Violated]
+    D --> E[Possible Causes]
+    E --> F["Contamination<br/>Batch Issues"]
+    E --> G["Storage Problems<br/>Temperature"]
+    D --> H["Need Different Model<br/>Account for Dependence"]
+</div></code></pre>
+<ol start="25">
+<li><strong>What if the &quot;10 times more likely&quot; ratio changes over time?</strong></li>
+</ol>
+<ul>
+<li>The probability p would change, violating Binomial's constant probability assumption. You'd need to test each batch separately or use time-varying models.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Probability Ratio] --> B["Constant Over<br/>Time?"]
+    B -->|Yes: 10:1 Always| C["Binomial Works<br/>p = 0.09 Constant"]
+    B -->|No: Changes| D[Problem!]
+    D --> E[p Varies]
+    E --> F["Test Each Batch<br/>Separately"]
+    E --> G["Use Time-Varying<br/>Probability Model"]
+</div></code></pre>
+<ol start="26">
+<li><strong>Why assume Normal distribution when we only have 50 samples?</strong></li>
+</ol>
+<ul>
+<li>It's an assumption based on: (1) biological processes often normal, (2) visual check shows approximate normality, (3) CLT supports it. But it's an assumption - verify with larger samples if critical.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">mindmap
+    root((Normality<br/>Assumption))
+        Justification
+            Biological Processes Often Normal
+            Visual Check Shows Approximate Shape
+            CLT Supports Sample Means
+        Risk
+            Only 50 Samples
+            May Not Be Perfectly Normal
+            Could Be Skewed
+        Mitigation
+            Check with Larger Sample
+            Use Transformations if Needed
+            Consider Non-Parametric Methods
+</div></code></pre>
+<ol start="27">
+<li><strong>What if the sample of 50 volunteers isn't representative?</strong></li>
+</ol>
+<ul>
+<li>Non-representative samples lead to biased estimates. Confidence intervals would be wrong, and conclusions invalid. Random sampling is crucial!</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Sampling Method] --> B["Random &<br/>Representative?"]
+    B -->|Yes| C["Valid Inference<br/>CI Reliable"]
+    B -->|No| D[Biased Sample]
+    D --> E[Wrong Estimates]
+    E --> F[Invalid CI]
+    F --> G[Wrong Conclusions]
+    G --> H[Bad Decisions]
+</div></code></pre>
+<h2 id="business-decision-making">BUSINESS DECISION MAKING</h2>
+<h3 id="connecting-statistics-to-actions">Connecting Statistics to Actions</h3>
+<ol start="28">
+<li><strong>How does P(X ≤ 3) = 1.73% help QA make decisions?</strong></li>
+</ol>
+<ul>
+<li>Very low probability of ≤3 failures suggests batch is high quality. If threshold is &quot;accept if ≤5 failures&quot;, 1.73% is well below, supporting approval.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A["P(X ≤ 3) = 1.73%"] --> B["Very Low<br/>Probability"]
+    B --> C{Quality Threshold?}
+    C -->|Accept if ≤5 failures| D["1.73% << 5%<br/>Well Below Threshold"]
+    D --> E["Strong Evidence<br/>High Quality"]
+    E --> F["Recommend<br/>Batch Approval"]
+</div></code></pre>
+<ol start="29">
+<li><strong>Why is P(X ≥ 30) = 0.3% important for the NYC order?</strong></li>
+</ol>
+<ul>
+<li>Extremely low probability (0.3%) means risk is minimal. NYC can proceed confidently. If probability were high (e.g., 20%), they'd need guarantees or alternatives.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[NYC Order Risk] --> B["P(X ≥ 30) = 0.3%"]
+    B --> C{Interpretation}
+    C --> D["Extremely Low Risk<br/>0.3% Chance"]
+    D --> E{Risk Acceptable?}
+    E -->|Yes: Very Low| F["Proceed with Order<br/>Confidently"]
+    E -->|No: If High| G["Request Guarantees<br/>or Alternatives"]
+</div></code></pre>
+<ol start="30">
+<li><strong>How do confidence intervals help with production planning?</strong></li>
+</ol>
+<ul>
+<li>CI (12.09-14.79 hours) tells manufacturers: &quot;Most doses effective within ~13 hours on average.&quot; Helps plan patient follow-ups, set expectations, schedule monitoring.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">mindmap
+    root((CI for<br/>Production Planning))
+        Patient Management
+            Schedule Follow-ups
+            Set Expectations
+            Plan Monitoring
+        Quality Control
+            Set Specifications
+            Monitor Process
+            Detect Shifts
+        Communication
+            Inform Healthcare Providers
+            Update Patient Materials
+            Regulatory Reporting
+</div></code></pre>
+<h2 id="statistical-concepts-deep-dive">STATISTICAL CONCEPTS DEEP DIVE</h2>
+<h3 id="understanding-the-math">Understanding the Math</h3>
+<ol start="31">
+<li><strong>Why use binom.cdf() for &quot;at most&quot; calculations instead of summing PMF values?</strong></li>
+</ol>
+<ul>
+<li>CDF is faster and more accurate. Summing many PMF values can accumulate rounding errors. CDF uses optimized algorithms designed for cumulative probabilities.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A["At Most 3<br/>P(X ≤ 3)"] --> B{Calculation Method}
+    B --> C["Sum PMF:<br/>P(0)+P(1)+P(2)+P(3)"]
+    B --> D["Use CDF:<br/>binom.cdf(3)"]
+    C --> E["Slower<br/>Rounding Errors"]
+    D --> F["Faster<br/>More Accurate"]
+    F --> G[Preferred Method]
+</div></code></pre>
+<ol start="32">
+<li><strong>What's the relationship between &quot;at least 30&quot; and &quot;at most 29&quot;?</strong></li>
+</ol>
+<ul>
+<li>They're complements! P(X ≥ 30) = 1 - P(X ≤ 29). Calculating &quot;at most 29&quot; and subtracting from 1 gives &quot;at least 30&quot; probability.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart LR
+    A["At Least 30<br/>P(X ≥ 30)"] --> B[Complement Rule]
+    B --> C["1 - P(X ≤ 29)"]
+    C --> D["At Most 29<br/>P(X ≤ 29)"]
+    D --> E["Use CDF:<br/>binom.cdf(29)"]
+    E --> F[Subtract from 1]
+    F --> A
+</div></code></pre>
+<ol start="33">
+<li><strong>Why does Normal distribution need both mean AND standard deviation?</strong></li>
+</ol>
+<ul>
+<li>Mean tells you center (where most values cluster), standard deviation tells you spread (how variable). Both are needed to fully describe the distribution and calculate probabilities.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Normal Distribution] --> B[Two Parameters]
+    B --> C["Mean μ = 13.44<br/>Center/Location"]
+    B --> D["Std Dev σ = 4.75<br/>Spread/Variability"]
+    C --> E["Where Values<br/>Cluster"]
+    D --> F["How Much<br/>Variation"]
+    E & F --> G["Complete Description<br/>Calculate Probabilities"]
+</div></code></pre>
+<ol start="34">
+<li><strong>What's the difference between norm.cdf() and norm.ppf()?</strong></li>
+</ol>
+<ul>
+<li>cdf: given value, find probability (P(X &lt; 11.5) = 0.34). ppf: given probability, find value (90th percentile = 19.52 hours). They're inverse functions.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Normal Functions] --> B["norm.cdf()"]
+    A --> C["norm.ppf()"]
+    B --> D["Input: Value<br/>11.5 hours"]
+    D --> E["Output: Probability<br/>0.34"]
+    C --> F["Input: Probability<br/>0.90"]
+    F --> G["Output: Value<br/>19.52 hours"]
+    E --> H["Inverse<br/>Functions"]
+    G --> H
+</div></code></pre>
+<ol start="35">
+<li><strong>Why use degrees of freedom (df = n-1) in t-distribution?</strong></li>
+</ol>
+<ul>
+<li>We estimated σ from sample (lost 1 degree of freedom). With n-1 df, t-distribution accounts for this estimation uncertainty, giving correct confidence intervals.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Degrees of Freedom] --> B["df = n - 1"]
+    B --> C[Why n-1?]
+    C --> D["Estimated σ from Sample"]
+    D --> E["Lost 1 Degree<br/>of Freedom"]
+    E --> F["t-distribution<br/>Accounts for This"]
+    F --> G["Correct CI<br/>Width"]
+</div></code></pre>
+<h2 id="real-world-implications">REAL-WORLD IMPLICATIONS</h2>
+<h3 id="beyond-the-numbers">Beyond the Numbers</h3>
+<ol start="36">
+<li><strong>What if the 90th percentile (19.52 hours) exceeds a safety threshold?</strong></li>
+</ol>
+<ul>
+<li>If threshold is 18 hours, 19.52 exceeds it - 10% of doses take too long. QA must investigate: is this acceptable? Can process be improved?</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A["90th Percentile<br/>19.52 hours"] --> B{Safety Threshold?}
+    B -->|18 hours| C["19.52 > 18<br/>Exceeds Threshold"]
+    B -->|20 hours| D["19.52 < 20<br/>Within Threshold"]
+    C --> E["10% of Doses<br/>Too Slow"]
+    E --> F[Investigate Cause]
+    F --> G{Acceptable?}
+    G -->|No| H["Improve Process<br/>or Reject Batch"]
+</div></code></pre>
+<ol start="37">
+<li><strong>How do these statistics help Medicon price the doses?</strong></li>
+</ol>
+<ul>
+<li>High quality (low failure rate) and consistent effectiveness (narrow CI) justify premium pricing. Poor quality or high variability reduces pricing power.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Statistical Results] --> B[Quality Metrics]
+    A --> C[Effectiveness Metrics]
+    B --> D["Low Failure Rate<br/>P(X≤3) = 1.73%"]
+    C --> E["Consistent Time<br/>CI: 12.09-14.79"]
+    D --> F[High Quality]
+    E --> G[Reliable]
+    F & G --> H["Premium Pricing<br/>Justified"]
+</div></code></pre>
+<ol start="38">
+<li><strong>What happens if confidence interval doesn't meet regulatory requirements?</strong></li>
+</ol>
+<ul>
+<li>If CI (12.09-14.79) includes unacceptable values (e.g., &gt;15 hours), batch may not meet standards. Need larger sample, process improvement, or batch rejection.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A["95% CI<br/>12.09 to 14.79 hrs"] --> B{Regulatory<br/>Requirement?} --> B["Regulatory<br/>Requirement?"]
+    B -->|Must be <15 hrs| C["CI Within Range<br/>12.09-14.79 < 15"]
+    C --> D["Meets Requirement<br/>Approve"]
+    B -->|Must be <12 hrs| E["CI Exceeds Range<br/>14.79 > 12"]
+    E --> F["Doesn't Meet<br/>Requirement"]
+    F --> G[Options]
+    G --> H["Larger Sample<br/>Narrower CI"]
+    G --> I[Improve Process]
+    G --> J[Reject Batch]
+</div></code></pre>
+<ol start="39">
+<li><strong>How can QA use these results to improve future batches?</strong></li>
+</ol>
+<ul>
+<li>If failure rate higher than expected, investigate causes. If time of effect too variable, improve manufacturing consistency. Statistics guide where to focus improvement efforts.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">mindmap
+    root((Using Statistics<br/>for Improvement))
+        Failure Rate Analysis
+            Compare Actual to Expected
+            Identify Root Causes
+            Target Improvements
+        Time Variability
+            Reduce Standard Deviation
+            Improve Consistency
+            Better Process Control
+        Continuous Monitoring
+            Track Trends Across Batches
+            Detect Shifts Early
+            Prevent Problems
+</div></code></pre>
+<ol start="40">
+<li><strong>What's the cost of being wrong? Type I vs Type II errors in batch testing?</strong></li>
+</ol>
+<ul>
+<li>Type I: Reject good batch (waste money, delay deployment). Type II: Accept bad batch (patient harm, reputation damage, lawsuits). Type II is usually worse!</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Batch Decision] --> B{True Quality?}
+    B -->|Good Batch| C[Accept: Correct]
+    B -->|Good Batch| D["Reject: Type I Error<br/>Waste Money"]
+    B -->|Bad Batch| E["Accept: Type II Error<br/>Patient Harm"]
+    B -->|Bad Batch| F[Reject: Correct]
+    D --> G[Cost: Financial Loss]
+    E --> H["Cost: Human Safety<br/>Much Worse!"]
+</div></code></pre>
+<h2 id="advanced-considerations">ADVANCED CONSIDERATIONS</h2>
+<h3 id="going-deeper">Going Deeper</h3>
+<ol start="41">
+<li><strong>Why not test all 40,000 doses instead of sampling?</strong></li>
+</ol>
+<ul>
+<li>Testing is destructive (dose consumed) or expensive. Sampling 100 gives statistical confidence at fraction of cost. Testing all would leave no doses to sell!</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Batch: 40,000 Doses] --> B{Test All?}
+    B -->|Yes| C[Problems]
+    C --> D["Destructive Testing<br/>Doses Consumed"]
+    C --> E["Very Expensive<br/>Time-Consuming"]
+    C --> F["No Doses Left<br/>to Sell!"]
+    B -->|No: Sample| G[Test 100 Doses]
+    G --> H[Statistical Confidence]
+    H --> I["39,900 Doses<br/>Available"]
+</div></code></pre>
+<ol start="42">
+<li><strong>How does batch size (40,000) affect the sampling strategy?</strong></li>
+</ol>
+<ul>
+<li>Larger batches allow smaller sample percentages while maintaining statistical power. For 40,000, 100 samples (0.25%) is sufficient due to large population size.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Batch Size] --> B[40,000 Doses]
+    B --> C["Sample Size<br/>n = 100"]
+    C --> D["Sample Percentage<br/>0.25%"]
+    D --> E{Sufficient?}
+    E -->|Yes| F["Large Population<br/>Small % OK"]
+    E -->|No: If Small Batch| G["Need Larger<br/>Sample %"]
+</div></code></pre>
+<ol start="43">
+<li><strong>What if the 50 volunteers aren't representative of the target population?</strong></li>
+</ol>
+<ul>
+<li>Results become biased. If volunteers are healthier/younger than target, time of effect estimates may be optimistic. Need stratified sampling for different demographics.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[50 Volunteers] --> B["Representative<br/>of Target?"]
+    B -->|Yes| C["Valid Inference<br/>Results Apply"]
+    B -->|No| D[Biased Sample]
+    D --> E["Example: All Young<br/>Healthy Volunteers"]
+    E --> F["Time Estimates<br/>Too Optimistic"]
+    F --> G["Wrong for Elderly<br/>or Sick Patients"]
+    G --> H["Need Stratified<br/>Sampling"]
+</div></code></pre>
+<ol start="44">
+<li><strong>How do you verify Binomial assumptions in practice?</strong></li>
+</ol>
+<ul>
+<li>Check independence: random sampling, no batch contamination. Check constant p: compare failure rates across subgroups. Check two outcomes: clearly define satisfactory/unsatisfactory.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">mindmap
+    root((Verifying<br/>Binomial Assumptions))
+        Two Outcomes
+            Clear Definition
+            No Ambiguity
+            Consistent Criteria
+        Fixed n
+            Sample Size Known
+            No Missing Data
+        Independence
+            Random Sampling
+            No Contamination
+            Separate Doses
+        Constant p
+            Compare Subgroups
+            Check Over Time
+            Statistical Tests
+</div></code></pre>
+<ol start="45">
+<li><strong>What if time of effect data shows outliers? How does that affect analysis?</strong></li>
+</ol>
+<ul>
+<li>Outliers can skew mean and widen confidence intervals. Investigate: measurement error? Special cases? Remove if errors, keep if real but report separately. Consider robust methods.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Time of Effect Data] --> B["Outliers<br/>Present?"]
+    B -->|No| C[Proceed Normally]
+    B -->|Yes| D[Investigate]
+    D --> E["Measurement<br/>Error?"]
+    E -->|Yes| F["Remove Outlier<br/>Correct Data"]
+    E -->|No: Real Value| G["Keep but Report<br/>Separately"]
+    G --> H["Consider Robust<br/>Methods"]
+    F --> I["Recalculate<br/>Statistics"]
+    H --> I
+</div></code></pre>
+<h2 id="connecting-concepts">CONNECTING CONCEPTS</h2>
+<h3 id="integration">Integration</h3>
+<ol start="46">
+<li><strong>How do Binomial and Normal distributions work together in this case study?</strong></li>
+</ol>
+<ul>
+<li>Binomial models discrete quality (satisfactory/not), Normal models continuous time. They're separate but complementary: quality affects deployment, time affects patient expectations.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Medicon Analysis] --> B[Binomial Distribution]
+    A --> C[Normal Distribution]
+    B --> D["Quality: Satisfactory/Not<br/>Discrete Outcomes"]
+    C --> E["Time of Effect<br/>Continuous Variable"]
+    D --> F["Batch Approval<br/>Decision"]
+    E --> G["Patient Expectations<br/>Planning"]
+    F & G --> H["Complete Picture<br/>for Decision Making"]
+</div></code></pre>
+<ol start="47">
+<li><strong>Why use different statistical methods for different questions?</strong></li>
+</ol>
+<ul>
+<li>Each question needs appropriate method: Binomial for counts (failures), Normal for continuous (time), t-distribution for means with unknown σ. Right tool for right job!</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">mindmap
+    root((Statistical<br/>Methods))
+        Binomial
+            Count Data
+            Success/Failure
+            Fixed Trials
+        Normal
+            Continuous Data
+            Known Parameters
+            Individual Values
+        t-Distribution
+            Sample Means
+            Unknown σ
+            Small Samples
+</div></code></pre>
+<ol start="48">
+<li><strong>What's the relationship between sample size and confidence interval width?</strong></li>
+</ol>
+<ul>
+<li>Inverse relationship: larger n → narrower CI (more precision). Doubling sample size doesn't halve width (it's √n relationship). Diminishing returns on precision.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Sample Size n] --> B["n = 50"]
+    A --> C["n = 100"]
+    A --> D["n = 200"]
+    B --> E[CI Width: 2.70 hrs]
+    C --> F["CI Width: 1.91 hrs<br/>29% Reduction"]
+    D --> G["CI Width: 1.35 hrs<br/>50% Reduction"]
+    H[Relationship] --> I["Width ∝ 1/√n<br/>Not Linear!"]
+</div></code></pre>
+<ol start="49">
+<li><strong>How do probability and confidence intervals complement each other?</strong></li>
+</ol>
+<ul>
+<li>Probabilities predict individual outcomes (P(X=3), P(time&lt;11.5)). Confidence intervals estimate population parameters (μ in 12.09-14.79). Both needed for complete understanding.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart LR
+    A[Statistical Analysis] --> B[Probabilities]
+    A --> C[Confidence Intervals]
+    B --> D["Individual Outcomes<br/>P(X = k)<br/>P(time < t)"]
+    C --> E["Population Parameters<br/>μ in CI<br/>True Mean Range"]
+    D --> F["Predict Specific<br/>Events"]
+    E --> G["Estimate Unknown<br/>Parameters"]
+    F & G --> H["Complete<br/>Understanding"]
+</div></code></pre>
+<ol start="50">
+<li><strong>What would you do differently if this were a clinical trial vs batch quality testing?</strong></li>
+</ol>
+<ul>
+<li>Clinical trial: larger sample, control group, hypothesis testing, regulatory oversight. Batch testing: smaller sample, compare to specifications, faster decisions, internal QA focus.</li>
+</ul>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Study Type] --> B[Clinical Trial]
+    A --> C[Batch Quality Testing]
+    B --> D["Large Sample<br/>n = 1000+"]
+    B --> E["Control Group<br/>Placebo"]
+    B --> F["Hypothesis Testing<br/>Regulatory"]
+    C --> G["Small Sample<br/>n = 100"]
+    C --> H["Compare to Specs<br/>No Control"]
+    C --> I["Fast Decisions<br/>Internal QA"]
+</div></code></pre>
+<hr>
+<p><em>Total Questions: 50</em></p>
+<p><strong>These questions cover:</strong></p>
+<ul>
+<li><strong>Fundamentals</strong>: Why use Binomial/Normal, how assumptions work</li>
+<li><strong>Calculations</strong>: Understanding PMF, CDF, percentiles, confidence intervals</li>
+<li><strong>Business Context</strong>: How statistics inform decisions</li>
+<li><strong>Assumptions</strong>: When methods break, how to verify</li>
+<li><strong>Integration</strong>: How concepts connect</li>
+<li><strong>Critical Thinking</strong>: Limitations, alternatives, real-world implications</li>
+</ul>
+<p>Each question includes a Mermaid diagram to enhance visual learning and understanding of the statistical concepts in the pharmaceutical context.</p>
+
+</body>
+</html>

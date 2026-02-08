@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>curious_learner_questions_brief.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="statistics-for-data-science---brief-qa">Statistics for Data Science - Brief Q&amp;A</h1>
+<p><em>Essential Concepts for 2.5-Hour Session</em></p>
+<h2 id="random-variables--distributions">RANDOM VARIABLES &amp; DISTRIBUTIONS</h2>
+<ol>
+<li>
+<p><strong>Why do we need random variables?</strong></p>
+<div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+**📖 Reference from PDF (Page 4)**
+<p>What is a Random Variable? A random variable is a function that assigns a numerical value to each outcome of an experiment. It assumes different values with a different probability. It is usually denoted by capital letter X a</p>
+</div>
+- They map outcomes to numbers, enabling mathematical operations and probability calculations.
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR
+    A[Coin Toss Outcome] -->|Maps to| B[Random Variable X]
+    A1[Heads] -->|X=1| B
+    A2[Tails] -->|X=0| B
+    B --> C[Mathematical Operations]
+    C --> D[Calculate Probabilities]
+</div></code></pre>
+<ol start="2">
+<li>
+<p><strong>Discrete vs Continuous - How do I decide?</strong></p>
+<div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+**📖 Reference from PDF (Page 4)**
+<p>representing the number of heads that can come up. So, X can take values from the The probability of two heads coming up is P(X=2) = ¼. Random Variable Discrete random variable: It can Continuous random variable</p>
+</div>
+- Countable (people, defects) = Discrete. Measurable on scale (weight, time) = Continuous.
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Real-World Phenomenon] --> B{Can you COUNT it?}
+    B -->|Yes| C[DISCRETE]
+    B -->|No| D{Can you MEASURE it?}
+    D -->|Yes| E[CONTINUOUS]
+</div></code></pre>
+<ol start="3">
+<li>
+<p><strong>What's the difference between PMF and PDF?</strong></p>
+<div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+**📖 Reference from PDF (Page 5)**
+<p>What is a Probability Distribution? The probability distribution of a random variable describes the values that the random variable can take along with the probabilities of those values. Discrete Probability Probability mass Distribution function pro</p>
+</div>
+- PMF: exact probabilities for discrete values P(X=x). PDF: density for continuous ranges; P(X=x)=0, work with intervals.
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Type of Variable] --> B[Discrete]
+    A --> C[Continuous]
+    B --> D["PMF: P(X=x)<br/>Specific Probability"]
+    C --> E["PDF: f(x)<br/>Density, Not Probability"]
+    E --> F["P(X=x) = 0<br/>P(a ≤ X ≤ b) = ∫f(x)dx"]
+</div></code></pre>
+<h2 id="binomial-distribution">BINOMIAL DISTRIBUTION</h2>
+<ol start="4">
+<li>
+<p><strong>When do I use Binomial distribution?</strong></p>
+<div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+**📖 Reference from PDF (Page 6)**
+<p>Distributions around us (commonly occuring) Bernoulli The outcome of tossing a fair coin Binomial The number of non-defective products in a production run Uniform The number of books sold weekly at a bookstore Normal IQ distribution of all the seven</p>
+</div>
+- Two outcomes, fixed n trials, independent, constant probability p. Example: n coin tosses, count heads.
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Binomial Requirements] --> B["Two Outcomes<br/>Success/Failure"]
+    A --> C["Fixed n Trials"]
+    A --> D["Independent"]
+    A --> E["Constant p"]
+    B & C & D & E --> F["X ~ Binomial(n,p)"]
+</div></code></pre>
+<ol start="5">
+<li>
+<p><strong>What's the intuition behind Binomial formula?</strong></p>
+<div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+**📖 Reference from PDF (Page 6)**
+<p>Distributions around us (commonly occuring) Bernoulli The outcome of tossing a fair coin Binomial The number of non-defective products in a production run Uniform The number of books sold weekly at a bookstore Normal IQ distribution of all the seven</p>
+</div>
+- Counts ways to get k successes in n trials, weighted by probability of each sequence: C(n,k) × p^k × (1-p)^(n-k).
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A["Binomial Formula<br/>P(X=k)"] --> B["C(n,k)<br/>Ways to Choose"]
+    A --> C["p^k<br/>k Successes"]
+    A --> D["(1-p)^(n-k)<br/>n-k Failures"]
+    B & C & D --> E["Multiply Together"]
+</div></code></pre>
+<h2 id="normal-distribution">NORMAL DISTRIBUTION</h2>
+<ol start="6">
+<li>
+<p><strong>Why is Normal distribution so important?</strong></p>
+<div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+**📖 Reference from PDF (Page 9)**
+<p>Normal Distribution The normal distribution is a continuous probability distribution that is symmetric to the mean. It is also known as a bell curve because the graph of its probability density function looks like a bel</p>
+</div>
+- Appears everywhere in nature (CLT), mathematically tractable, foundation for most statistical tests.
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">mindmap
+    root((Why Normal<br/>Matters))
+        Central Limit Theorem
+            Sample Means Normal
+            Foundation of Inference
+        Statistical Tests
+            t-tests
+            ANOVA
+            Regression
+        Natural Phenomenon
+            Heights
+            Errors
+            Many Measurements
+</div></code></pre>
+<ol start="7">
+<li>
+<p><strong>What does the Empirical Rule tell me?</strong></p>
+<div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+**📖 Reference from PDF (Page 9)**
+</div> - 68% within 1 SD, 95% within 2 SD, 99.7% within 3 SD. Helps identify outliers and understand variability. ```mermaid graph TD A["Normal Distribution<br/>Empirical Rule"] --> B["μ ± 1σ: 68%"] A --> C["μ ± 2σ: 95%"] A --> D["μ ± 3σ: 99.7%"] C --> E["Identify Outliers:<br/>Outside 2σ = Unusual"] ``` ## SAMPLING & CLT 8. **Why sample instead of studying everyone?** <div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;"> **📖 Reference from PDF (Page 10)** Sampling Distributions What is the need for sampling? Given the limited resources and time, it is not always possible to study the population. That’s why we choose a sample out of the population to make infer
+</div>
+- Cost, time, often impossible. Well-designed samples give accurate results with quantifiable uncertainty.
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Population Study] --> B{Study Everyone?}
+    B -->|Problems| C["Expensive<br/>Time-Consuming<br/>Often Impossible"]
+    B -->|Practical| D[Sampling]
+    D --> E["Accurate Results<br/>Quantifiable Uncertainty"]
+</div></code></pre>
+<ol start="9">
+<li>
+<p><strong>What's the Central Limit Theorem and why is it &quot;central&quot;?</strong></p>
+<div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+**📖 Reference from PDF (Page 11)**
+<p>Central Limit Theorem The sampling distribution of the sample means will approach normal distribution as the sample size gets bigger, no matter what the shape of the population distribution is. VN</p>
+</div>
+- Sample means become normal as n increases, regardless of population shape. Central because it enables most statistical inference.
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A["Many Independent<br/>Random Factors"] --> B[Sum/Average Them]
+    B --> C["Extremes Cancel Out"]
+    C --> D["Central Tendency<br/>Emerges"]
+    D --> E["Normal Distribution<br/>by CLT"]
+    E --> F["Enables Statistical<br/>Inference"]
+</div></code></pre>
+<ol start="10">
+<li><strong>Why n ≥ 30 for CLT?</strong></li>
+</ol>
+   <div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+   **📖 Reference from PDF (Page 11)**
+<p>Central Limit Theorem The sampling distribution of the sample means will approach normal distribution as the sample size gets bigger, no matter what the shape of the population distribution is. VN</p>
+   </div>
+    - Rule of thumb. Symmetric populations may work with smaller n; highly skewed need larger n. CLT works for any distribution with finite mean/variance.
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Sample Size for CLT] --> B["n ≥ 30<br/>Rule of Thumb"]
+    B --> C["Symmetric: n=10-20 OK<br/>Skewed: n>50 May Need<br/>Normal: Any n Works"]
+</div></code></pre>
+<h2 id="confidence-intervals">CONFIDENCE INTERVALS</h2>
+<ol start="11">
+<li><strong>What does &quot;95% confidence&quot; actually mean?</strong></li>
+</ol>
+   <div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+   **📖 Reference from PDF (Page 13)**
+<p>Case Study Inferential Statistics 13</p>
+   </div>
+    - If we repeated sampling 100 times, about 95 intervals would contain true value. Single interval either does or doesn't - we don't know which.
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A["95% Confidence Interval"] --> B["If Repeat 100 Times"]
+    B --> C["95 Intervals Contain<br/>True μ"]
+    B --> D["5 Intervals Don't"]
+    C --> E["Current Interval:<br/>Either Does or Doesn't"]
+</div></code></pre>
+<ol start="12">
+<li><strong>Why use t-distribution instead of z for confidence intervals?</strong></li>
+</ol>
+   <div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+   **📖 Reference from PDF (Page 14)**
+<p>Gauge Your Understanding 1. What is hypothesis testing and what are the different types of hypotheses? 2. What are some of the key terms involved in hypothesis testing? 3. What is the difference between one-tailed and two-tailed tests? 4. What are th</p>
+   </div>
+    - Population σ usually unknown. t-distribution accounts for estimating σ from sample, giving wider (more conservative) intervals.
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Confidence Interval] --> B{Population σ<br/>Known?}
+    B -->|Yes: Rare| C["z-distribution<br/>Narrower CI"]
+    B -->|No: Common| D["t-distribution<br/>Wider CI"]
+    D --> E["Accounts for<br/>Estimation Uncertainty"]
+</div></code></pre>
+<h2 id="hypothesis-testing">HYPOTHESIS TESTING</h2>
+<ol start="13">
+<li><strong>Why start with null hypothesis H₀?</strong></li>
+</ol>
+   <div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+   **📖 Reference from PDF (Page 15)**
+<p>thesis Testing Question of Interest Hypotheses about the population parameter(s) e.g. Has the new online Ad increased the conversion rates for an E- website? Null Hypothesis (H ) Alternative Hypothesis (H ) 0 a The status quo The research hypothesis</p>
+   </div>
+    - Science tests by attempting to disprove. We assume claim true (H₀), then see if data provides strong evidence against it.
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Research Question] --> B["Formulate H₀<br/>Assume Claim True"]
+    B --> C[Collect Data]
+    C --> D{Strong Evidence<br/>Against H₀?}
+    D -->|Yes: p < α| E["Reject H₀<br/>Claim Not Supported"]
+    D -->|No: p ≥ α| F["Fail to Reject H₀<br/>Claim Supported"]
+</div></code></pre>
+<ol start="14">
+<li><strong>What does p-value really mean?</strong></li>
+</ol>
+   <div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+   **📖 Reference from PDF (Page 16)**
+<p>Key terms in Hypothesis Testing ● Probability of observing equal or more extreme results than the computed test statistic, under the null hypothesis. P-Value ● The smaller the p-value, the stronger the evidence against the null hypothesis. ● The sign</p>
+   </div>
+    - If H₀ were true, p-value is probability of getting results as extreme or more extreme than observed. NOT probability H₀ is true!
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A["p-value Definition"] --> B["Probability of<br/>Observed or More<br/>Extreme Results"]
+    B --> C["IF H₀ Is True"]
+    D["p = 0.03"] --> E["If H₀ True:<br/>3% Chance of<br/>This Result"]
+    E --> F["Evidence Against H₀"]
+    D --> G["NOT: 97% Sure<br/>H₀ Is False"]
+</div></code></pre>
+<ol start="15">
+<li><strong>Z-test vs t-test - when to use which?</strong></li>
+</ol>
+   <div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+   **📖 Reference from PDF (Page 16)**
+<p>Key terms in Hypothesis Testing ● Probability of observing equal or more extreme results than the computed test statistic, under the null hypothesis. P-Value ● The smaller the p-value, the stronger the evidence against the null hypothesis. ● The sign</p>
+   </div>
+    - Z-test: population σ known (rare). t-test: σ unknown, estimate from sample (common). t-test is more realistic and conservative.
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Choose Test] --> B{Population σ<br/>Known?}
+    B -->|Yes: Rare| C["z-test<br/>More Precise"]
+    B -->|No: Common| D["t-test<br/>More Conservative"]
+    D --> E["Accounts for<br/>Estimation Uncertainty"]
+</div></code></pre>
+<ol start="16">
+<li><strong>What does &quot;fail to reject H₀&quot; mean?</strong></li>
+</ol>
+   <div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+   **📖 Reference from PDF (Page 16)**
+<p>ve of the test statistic is partitioned Acceptance or Rejection into acceptance and rejection region. Region ● Reject the null hypothesis when the test statistic lies in the rejection region, else we fail to reject it. Types of Error ● There are two</p>
+   </div>
+    - Insufficient evidence against claim. NOT proof it's true. Could be true, or sample too small to detect difference.
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A["Fail to Reject H₀"] --> B["Insufficient Evidence<br/>Against Claim"]
+    B --> C["NOT Proof That<br/>Claim Is True"]
+    C --> D["Possible Reasons"]
+    D --> E["Actually True"]
+    D --> F["Sample Too Small"]
+    D --> G["Difference Too Small"]
+</div></code></pre>
+<h2 id="type-i--type-ii-errors">TYPE I &amp; TYPE II ERRORS</h2>
+<ol start="17">
+<li><strong>What are Type I and Type II errors?</strong></li>
+</ol>
+   <div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+   **📖 Reference from PDF (Page 17)**
+<p>Type I and Type II errors Level of significance = α Confidence Level = H True H False 0 0 (1 - α ) Type I Error Correct Reject H 0 (α) decision Fail to reject Correct Type II Error H decision (β) 0 Power of the test = (1 - β)</p>
+   </div>
+    - Type I: Reject true H₀ (false positive). Type II: Fail to reject false H₀ (false negative). They're inversely related.
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Decision Matrix] --> B{Truth About H₀}
+    B -->|H₀ True| C["Correct Decision<br/>Fail to Reject"]
+    B -->|H₀ True| D["Type I Error α<br/>Reject H₀"]
+    B -->|H₀ False| E["Type II Error β<br/>Fail to Reject"]
+    B -->|H₀ False| F["Correct Decision<br/>Power = 1-β<br/>Reject H₀"]
+</div></code></pre>
+<ol start="18">
+<li><strong>Which error is worse?</strong></li>
+</ol>
+   <div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+   **📖 Reference from PDF (Page 17)**
+<p>Type I and Type II errors Level of significance = α Confidence Level = H True H False 0 0 (1 - α ) Type I Error Correct Reject H 0 (α) decision Fail to reject Correct Type II Error H decision (β) 0 Power of the test = (1 - β)</p>
+   </div>
+    - Depends on context! Convicting innocent (Type I) vs freeing guilty (Type II). Medical: missing disease (Type II) often worse than false alarm (Type I).
+<pre><code class="language-mermaid"><div class="mermaid">mindmap
+    root((Error<br/>Consequences))
+        Type I Examples
+            False Alarm
+            Convict Innocent
+            Reject Good Batch
+        Type II Examples
+            Miss Real Fire
+            Free Guilty
+            Accept Bad Batch
+        Context Matters
+            Medical: Type II Often Worse
+            Legal: Type I Often Worse
+            Business: Depends on Costs
+</div></code></pre>
+<h2 id="one-tailed-vs-two-tailed">ONE-TAILED VS TWO-TAILED</h2>
+<ol start="19">
+<li><strong>When do I use one-tailed vs two-tailed test?</strong></li>
+</ol>
+   <div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+   **📖 Reference from PDF (Page 16)**
+<p>Key terms in Hypothesis Testing ● Probability of observing equal or more extreme results than the computed test statistic, under the null hypothesis. P-Value ● The smaller the p-value, the stronger the evidence against the null hypothesis. ● The sign</p>
+   </div>
+    - Two-tailed: test "different" (either direction). One-tailed: test specific direction only. Use two-tailed unless strong reason for one direction.
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Hypothesis Test] --> B{What Are You<br/>Testing?}
+    B -->|"Different"| C["Two-Tailed<br/>Hₐ: μ ≠ μ₀"]
+    B -->|"Greater"| D["One-Tailed<br/>Hₐ: μ > μ₀"]
+    B -->|"Less"| E["One-Tailed<br/>Hₐ: μ < μ₀"]
+    C --> F["Tests Both Directions<br/>More Conservative"]
+</div></code></pre>
+<h2 id="connecting-concepts">CONNECTING CONCEPTS</h2>
+<ol start="20">
+<li><strong>How do all these concepts fit together?</strong></li>
+</ol>
+   <div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+   **📖 Reference from PDF (Page 2)**
+<p>Topics covered so far 1. Statistical Inference a. Distributions - Binomial, Uniform, Normal b. Sampling c. Central limit theorem Intervals 2. Hypothesis Testing a. Hypothesis Formulation b. One-Tailed</p>
+   </div>
+    - Distributions model randomness → Sampling introduces variability → CLT makes means normal → Enables hypothesis tests and confidence intervals.
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A["Probability<br/>Distributions"] --> B["Model Randomness<br/>in Data"]
+    B --> C[Sampling]
+    C --> D["Introduces<br/>Variability"]
+    D --> E["Central Limit<br/>Theorem"]
+    E --> F["Sample Means<br/>Are Normal"]
+    F --> G["Enables Statistical<br/>Inference"]
+    G --> H["Confidence<br/>Intervals"]
+    G --> I["Hypothesis<br/>Testing"]
+</div></code></pre>
+<hr>
+<p><em>Total Questions: 20 Core Concepts</em>
+<em>Optimized for 2.5-hour teaching session</em></p>
+<p><strong>Key Learning Path:</strong></p>
+<ol>
+<li>Random Variables &amp; Distributions (Q1-3)</li>
+<li>Binomial Distribution (Q4-5)</li>
+<li>Normal Distribution (Q6-7)</li>
+<li>Sampling &amp; CLT (Q8-10)</li>
+<li>Confidence Intervals (Q11-12)</li>
+<li>Hypothesis Testing (Q13-16)</li>
+<li>Errors &amp; Test Types (Q17-19)</li>
+<li>Integration (Q20)</li>
+</ol>
+
+</body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>mobile_internet_curious_learner_questions_brief.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="mobile-internet-usage-analysis---brief-qa">Mobile Internet Usage Analysis - Brief Q&amp;A</h1>
+<p><em>Essential Hypothesis Testing Concepts</em></p>
+<h2 id="case-context">CASE CONTEXT</h2>
+<ol>
+<li>
+<p><strong>Why test a company's claim about average usage?</strong></p>
+<div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+**📖 Reference from Notebook (Context)**
+<h2 id="context-experiencemyservices-reported-that-a-typical-american-spends-an-average-of-144-minutes-24-hours-per-day-accessing-the-internet-via-a-mobile-device-with-a-population-standard-deviation-of-110-minutes-you-are-interested-in-checking-whether-this-claim-is-supported-by-dat"><strong>Context</strong> ExperienceMyServices reported that a typical American spends an average of <strong>144 minutes (2.4 hours)</strong> per day accessing the Internet via a <strong>mobile device</strong>, with a <strong>population standard deviation of 110 minutes</strong>. You are interested in checking whether this claim is supported by dat...</h2>
+</div>
+- Verify claims before making business decisions. Wrong claims lead to wrong strategies.
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A["Company Claim<br/>144 min/day"] --> B{Is Claim True?}
+    B -->|Verify| C[Hypothesis Testing]
+    C --> D["Evidence Supports<br/>Claim?"]
+    D -->|Yes| E["Use for Decisions"]
+    D -->|No| F["Reject Claim"]
+</div></code></pre>
+<h2 id="hypothesis-formulation">HYPOTHESIS FORMULATION</h2>
+<ol start="2">
+<li>
+<p><strong>Why H₀: μ = 144 and Hₐ: μ ≠ 144?</strong></p>
+<div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+**📖 Reference from Notebook (Step 1: Define null and alternate hypotheses)**
+<h3 id="step-1-define-null-and-alternate-hypotheses">Step 1: Define null and alternate hypotheses</h3>
+</div>
+- H₀ assumes claim true. Hₐ tests if different (two-tailed). Science tests by attempting to disprove.
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Research Question] --> B["H₀: μ = 144<br/>Assume Claim True"]
+    B --> C["Hₐ: μ ≠ 144<br/>Test if Different"]
+    C --> D["Two-Tailed Test<br/>Either Direction"]
+</div></code></pre>
+<ol start="3">
+<li>
+<p><strong>Why two-tailed instead of one-tailed?</strong></p>
+<div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+**📖 Reference from Notebook (Step 1: Define null and alternate hypotheses)**
+<h3 id="step-1-define-null-and-alternate-hypotheses">Step 1: Define null and alternate hypotheses</h3>
+</div>
+- Question asks "different" - could be higher OR lower. Two-tailed tests both directions.
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Hypothesis Type] --> B["Two-Tailed<br/>μ ≠ 144"]
+    A --> C["One-Tailed<br/>μ > 144 or μ < 144"]
+    B --> D["Tests Both Directions<br/>More Appropriate"]
+</div></code></pre>
+<h2 id="z-test-vs-t-test">Z-TEST VS T-TEST</h2>
+<ol start="4">
+<li>
+<p><strong>Why use t-test when σ = 110 is given?</strong></p>
+<div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+**📖 Reference from Notebook (Step 6: Calculate the p-value using t-statistic)**
+<h3 id="step-6-calculate-the-p-value-using-t-statistic">Step 6: Calculate the p-value using t-statistic</h3>
+</div>
+- Even if σ given, it's usually an estimate. t-test accounts for uncertainty in σ, more conservative and realistic.
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Population σ] --> B{Truly Known<br/>with Certainty?}
+    B -->|Rare| C["z-test<br/>More Precise"]
+    B -->|Common| D["t-test<br/>More Conservative"]
+    D --> E["Accounts for<br/>Estimation Uncertainty"]
+</div></code></pre>
+<ol start="5">
+<li>
+<p><strong>Why does t-test give larger p-value (0.169) than Z-test (0.069)?</strong></p>
+<div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+**📖 Reference from Notebook (Step 6: Calculate the p-value using t-statistic)**
+<h3 id="step-6-calculate-the-p-value-using-t-statistic">Step 6: Calculate the p-value using t-statistic</h3>
+</div>
+- t-distribution has fatter tails than normal. Accounts for estimating σ from sample. More conservative.
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR
+    A[Same Test Statistic] --> B["z-distribution<br/>p = 0.069"]
+    A --> C["t-distribution<br/>p = 0.169"]
+    C --> D["Fatter Tails<br/>More Conservative"]
+</div></code></pre>
+<h2 id="interpreting-results">INTERPRETING RESULTS</h2>
+<ol start="6">
+<li>
+<p><strong>What does &quot;fail to reject H₀&quot; mean?</strong></p>
+<div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+**📖 Reference from Notebook (Step 5: Decide to reject or not to reject the null hypothesis based on the z-statistic)**
+<h3 id="step-5-decide-to-reject-or-not-to-reject-the-null-hypothesis-based-on-the-z-statistic">Step 5: Decide to reject or not to reject the null hypothesis based on the z-statistic</h3>
+</div>
+- Insufficient evidence against claim. Data consistent with 144 minutes. NOT proof it's exactly 144.
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A["Fail to Reject H₀"] --> B["Insufficient Evidence<br/>Against Claim"]
+    B --> C["Data Consistent<br/>with 144 min"]
+    C --> D["NOT Proof<br/>Exactly 144"]
+</div></code></pre>
+<ol start="7">
+<li>
+<p><strong>What if p-value was 0.03 instead of 0.069?</strong></p>
+<div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+**📖 Reference from Notebook (Step 5: Decide to reject or not to reject the null hypothesis based on the z-statistic)**
+<h3 id="step-5-decide-to-reject-or-not-to-reject-the-null-hypothesis-based-on-the-z-statistic">Step 5: Decide to reject or not to reject the null hypothesis based on the z-statistic</h3>
+</div>
+- p=0.03 < α=0.05, so reject H₀. Conclude population mean is different from 144. Strong evidence against claim.
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[p-value] --> B{p < α?}
+    B -->|Yes: p=0.03| C["Reject H₀<br/>Claim Not Supported"]
+    B -->|No: p=0.069| D["Fail to Reject H₀<br/>Claim Supported"]
+</div></code></pre>
+<h2 id="assumptions">ASSUMPTIONS</h2>
+<ol start="8">
+<li>
+<p><strong>What if sample isn't random or representative?</strong></p>
+<div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+**📖 Reference from Notebook (Context)**
+<h2 id="context-experiencemyservices-reported-that-a-typical-american-spends-an-average-of-144-minutes-24-hours-per-day-accessing-the-internet-via-a-mobile-device-with-a-population-standard-deviation-of-110-minutes-you-are-interested-in-checking-whether-this-claim-is-supported-by-dat"><strong>Context</strong> ExperienceMyServices reported that a typical American spends an average of <strong>144 minutes (2.4 hours)</strong> per day accessing the Internet via a <strong>mobile device</strong>, with a <strong>population standard deviation of 110 minutes</strong>. You are interested in checking whether this claim is supported by dat...</h2>
+</div>
+- Non-random sampling introduces bias. Results won't generalize. Conclusions invalid. Random sampling is critical!
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Sampling Method] --> B{Random &<br/>Representative?}
+    B -->|Yes| C["Valid Inference"]
+    B -->|No: Biased| D["Invalid Inference<br/>Wrong Conclusions"]
+</div></code></pre>
+<ol start="9">
+<li>
+<p><strong>Why assume Normal distribution with n=30?</strong></p>
+<div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+**📖 Reference from Notebook (Context)**
+<h2 id="context-experiencemyservices-reported-that-a-typical-american-spends-an-average-of-144-minutes-24-hours-per-day-accessing-the-internet-via-a-mobile-device-with-a-population-standard-deviation-of-110-minutes-you-are-interested-in-checking-whether-this-claim-is-supported-by-dat"><strong>Context</strong> ExperienceMyServices reported that a typical American spends an average of <strong>144 minutes (2.4 hours)</strong> per day accessing the Internet via a <strong>mobile device</strong>, with a <strong>population standard deviation of 110 minutes</strong>. You are interested in checking whether this claim is supported by dat...</h2>
+</div>
+- CLT says sample means approach normal. With n=30, sample mean distribution approximately normal, making tests valid.
+</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD
+    A[Central Limit Theorem] --> B["Sample Means<br/>Approach Normal"]
+    B --> C["n = 30<br/>Usually Sufficient"]
+    C --> D["Tests Valid<br/>Even if Population<br/>Not Normal"]
+</div></code></pre>
+<h2 id="business-implications">BUSINESS IMPLICATIONS</h2>
+<ol start="10">
+<li><strong>How should company use test results?</strong></li>
+</ol>
+   <div style="background-color: #fffef0; border-left: 4px solid #ffd700; padding: 12px; margin: 10px 0; border-radius: 4px;">
+   **📖 Reference from Notebook (Step 5: Decide to reject or not to reject the null hypothesis based on the z-statistic)**
+<h3 id="step-5-decide-to-reject-or-not-to-reject-the-null-hypothesis-based-on-the-z-statistic">Step 5: Decide to reject or not to reject the null hypothesis based on the z-statistic</h3>
+   </div>
+    - Fail to reject means data consistent with claim. Can use 144 min in marketing, but acknowledge variability exists.
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TD
+    A[Test Results] --> B["Fail to Reject H₀"]
+    B --> C["Can Use 144 min<br/>in Marketing"]
+    C --> D["Acknowledge<br/>Variability"]
+</div></code></pre>
+<hr>
+<p><em>Total Questions: 10 Core Concepts</em>
+<em>Focus: Hypothesis Testing in Practice</em></p>
+<p><strong>Key Takeaways:</strong></p>
+<ul>
+<li>Formulate H₀ and Hₐ correctly</li>
+<li>Choose appropriate test (z vs t)</li>
+<li>Interpret p-values correctly</li>
+<li>Understand assumptions</li>
+<li>Connect statistics to business decisions</li>
+</ul>
+
+</body>
+</html>
